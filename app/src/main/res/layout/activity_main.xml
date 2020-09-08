@@ -11,8 +11,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
         android:text="Progressiva"
         android:textColor="#9C27B0"
@@ -79,7 +79,7 @@
 
     <EditText
         android:id="@+id/valor45"
-        android:layout_width="116dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -95,39 +95,39 @@
 
     <EditText
         android:id="@+id/valor35"
-        android:layout_width="116dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
-        android:layout_marginTop="78dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="76dp"
         android:ems="10"
         android:hint="Valor(ex: 105.50)"
         android:inputType="numberDecimal"
         android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/quantidade45"
+        app:layout_constraintEnd_toStartOf="@+id/quantidade35"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/valor45" />
 
-    <EditText
-        android:id="@+id/quantidade45"
+    <TextView
+        android:id="@+id/textView20"
         android:layout_width="wrap_content"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="78dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:ems="10"
-        android:hint="Quantidade(ex:4)"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Tintura"
+        android:textColor="#9C27B0"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/valor35"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/valor35"
-        app:layout_constraintTop_toBottomOf="@+id/quantidade45" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/quantidade45"
-        android:layout_width="168dp"
+        android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -166,25 +166,9 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
-        android:text="TextView"
+        android:text="R$ 0.00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonTotal" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:text="Tintura"
-        android:textColor="#9C27B0"
-        android:textSize="18sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toStartOf="@+id/valor35"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView22"
@@ -226,6 +210,7 @@
         android:id="@+id/buttonApagar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
+        android:onClick="apagar"
         android:text="Apagar"
         app:layout_constraintBottom_toBottomOf="@+id/buttonAdicionar"
         app:layout_constraintEnd_toStartOf="@+id/buttonTotal"
@@ -241,5 +226,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonApagar" />
+
+    <EditText
+        android:id="@+id/quantidade35"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Quantidade(ex:4)"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/valor35"
+        app:layout_constraintTop_toBottomOf="@+id/quantidade45" />
+
+    <Button
+        android:id="@+id/buttonReiniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="24dp"
+        android:onClick="reiniciar"
+        android:text="Reiniciar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdicionar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
